@@ -16,7 +16,7 @@ import re
 from subprocess import check_call
 import sys
 
-version = "0.2.1"
+version = "0.2.2"
 
 routing = [
     ("prelude", "prelude.ml"),
@@ -36,7 +36,7 @@ meta_routing = ("metadata", "meta.json")
 
 metadata_routing_v1 = [
     ("titre", "title"),
-    ("diff", "starts"),
+    ("diff", "stars"),
     ("description", "short_description"),
 ]
 
