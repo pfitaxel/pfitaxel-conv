@@ -16,7 +16,7 @@ import re
 from subprocess import check_call
 import sys
 
-version = "0.2.0"
+version = "0.2.1"
 
 routing = [
     ("prelude", "prelude.ml"),
@@ -89,11 +89,11 @@ def args_parse(argv):
             exo_dir = arg
         else:
             assert False, "unhandled option"
+    if not exo_dir:
+        print("Missing option(s): -o <dest exo dir>")
+        usage(1)
     if len(args) == 0:
         print("Missing argument: <src JSON file>")
-        usage(1)
-    if (not exo_dir):
-        print("Missing option(s): -o <dest exo dir>")
         usage(1)
     if len(args) > 1:
         print("Too many arguments:", args)
